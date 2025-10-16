@@ -185,7 +185,7 @@
 #'
 #' Similar to MALDIquant:::.match.closest but we need to reimplement it here,
 #' because @pavel_shliaha asks for handling duplicated matches differently: see
-#' https://github.com/sgibb/topdownr/issues/72
+#' https://codeberg.org/sgibb/topdownr/issues/72
 #'
 #' @param mz `double`, measured mz.
 #' @param fmass `double`, fragment mass

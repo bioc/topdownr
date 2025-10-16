@@ -124,7 +124,7 @@
             ## Somehow the FilterString doesn't always contains the right mass
             ## label and we have to correct them.
             ## See also:
-            ## - https://github.com/sgibb/topdownr/issues/25
+            ## - https://codeberg.org/sgibb/topdownr/issues/25
             fixedFilterStrings <- .fixFilterString(d$FilterString)
             if (nFixed <- sum(fixedFilterStrings != d$FilterString)) {
                 warning(
@@ -139,7 +139,7 @@
             ## Sometimes skips happen and the ID is not the same as in the
             ## FilterString (happens often in the missing_scans files)
             ## See also:
-            ## - https://github.com/sgibb/topdownr/issues/14
+            ## - https://codeberg.org/sgibb/topdownr/issues/14
             if (is.unsorted(d$Condition)) {
                 warning(
                     "ID in FilterString are not sorted in ascending order. ",

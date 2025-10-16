@@ -18,7 +18,7 @@
 #' @author Sebastian Gibb \email{mail@@sebastiangibb.de},
 #' Pavel Shliaha \email{pavels@bmb.sdu.dk},
 #' Ole Nørregaard Jensen \email{jenseno@bmb.sdu.dk}
-#' @references \url{https://github.com/sgibb/topdownr/}
+#' @references \url{https://codeberg.org/sgibb/topdownr/}
 #' @keywords package
 #'
 #' @import methods

@@ -103,8 +103,8 @@ cat0 <- function(...) {
 #' ids following a sequence (with some drop-outs).
 #'
 #' See the following issues for details:
-#' - https://github.com/sgibb/topdownr/issues/14
-#' - https://github.com/sgibb/topdownr/issues/25
+#' - https://codeberg.org/sgibb/topdownr/issues/14
+#' - https://codeberg.org/sgibb/topdownr/issues/25
 #'
 #' TODO: replace this with a better approach if we understand why some ID are
 #' skipped.
@@ -633,7 +633,7 @@ cat0 <- function(...) {
 #' "controllerType=0 controllerNumber=1 scan=[acquisitionNum]".
 #' As fallback solution proteowizard just use 1:n as acquisitionNum which cause
 #' mismatches to the ScanHeadsman output. See
-#' https://github.com/sgibb/topdownr/issues/73 for details.
+#' https://codeberg.org/sgibb/topdownr/issues/73 for details.
 #'
 #' @param x `character`
 #' @return `double`

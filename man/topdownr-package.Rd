@@ -22,13 +22,13 @@ Lumos MS devise: \code{vignette("data-generation", package="topdownr")}.
 }
 }
 \references{
-\url{https://github.com/sgibb/topdownr/}
+\url{https://codeberg.org/sgibb/topdownr/}
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/sgibb/topdownr/}
-  \item Report bugs at \url{https://github.com/sgibb/topdownr/issues/}
+  \item \url{https://codeberg.org/sgibb/topdownr/}
+  \item Report bugs at \url{https://codeberg.org/sgibb/topdownr/issues/}
 }
 
 }

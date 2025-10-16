@@ -2,15 +2,15 @@
 
 You are welcome to:
 
-* submit suggestions and bug-reports at: <https://github.com/sgibb/topdownr/issues>
-* send a pull request on: <https://github.com/sgibb/topdownr/compare>
+* submit suggestions and bug-reports at: <https://codeberg.org/sgibb/topdownr/issues>
+* send a pull request on: <https://codeberg.org/sgibb/topdownr/compare>
 * compose an e-mail to: <mail@sebastiangibb.de>
 
 # How to contribute code
 
-[Fork](https://help.github.com/articles/fork-a-repo/), then clone the repository:
+[Fork](https://help.codeberg.org/articles/fork-a-repo/), then clone the repository:
 
-    git clone git@github.com:your-username/topdownr.git
+    git clone git@codeberg.org:your-username/topdownr.git
 
 Make sure all checks and tests pass:
 
@@ -22,7 +22,7 @@ Ensure all checks and tests pass:
 
     R CMD build topdownr && CMD check --as-cran --no-stop-on-test-error topdownr_*.tar.gz
 
-Push to your fork and submit a [pull request](https://help.github.com/articles/about-pull-requests/)
+Push to your fork and submit a [pull request](https://help.codeberg.org/articles/about-pull-requests/)
 
 Waiting for our response. We may suggest some changes and/or improvements.
 

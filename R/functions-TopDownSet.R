@@ -352,11 +352,11 @@ readTopDownFiles <- function(path, pattern=".*",
     d <- .condition2data.frame(x)
     ggplot(
         data=d,
-        aes_string(x="mz", y="intensity", fragment="fragment", color="type")
+        aes(x=mz, y=intensity, fragment=fragment, color=type)
     ) +
-    geom_segment(aes_string(xend="mz", yend=0L)) +
+    geom_segment(aes(xend=mz, yend=0L)) +
     geom_text(
-        aes_string(label="fragment"),
+        aes(label=fragment),
         angle=90L,
         hjust=0.2,
         vjust=0.5,

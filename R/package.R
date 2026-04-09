@@ -30,8 +30,8 @@
 #' @importFrom Matrix Matrix sparseMatrix sparseVector crossprod tcrossprod
 #' drop0 nnzero
 #' @importFrom Biobase assayData
-#' @importFrom ggplot2 aes aes_string element_blank element_rect element_text
-#' facet_grid geom_hline geom_raster geom_segment geom_text geom_vline ggplot
+#' @importFrom ggplot2 aes element_blank element_line element_rect element_text
+#' facet_grid geom_hline geom_tile geom_segment geom_text geom_vline ggplot
 #' ggtitle labs scale_alpha scale_color_manual scale_fill_manual
 #' scale_x_discrete scale_y_continuous theme theme_classic
 #' @importFrom grDevices pdf dev.off

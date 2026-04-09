@@ -127,16 +127,15 @@ setMethod("fragmentationMap", "NCBSet",
     gg <- ggplot(data=d)
         if (alphaIntensity) {
             gg <- gg +
-                geom_raster(
-                    aes_string(
-                        x="col",
-                        y="row",
-                        fill="x",
-                        alpha="AssignedIntensity"
+                geom_tile(
+                    aes(x=col,
+                        y=row,
+                        fill=x,
+                        alpha=AssignedIntensity
                     )
                 ) + scale_alpha(name="Assigned Intensity")
         } else {
-           gg <- gg + geom_raster(aes_string(x="col", y="row", fill="x"))
+           gg <- gg + geom_tile(aes(x=col, y=row, fill=x))
         }
     gg  <- gg +
         facet_grid(. ~ Activation, scales="free_x", space="free_x") +
@@ -153,19 +152,11 @@ setMethod("fragmentationMap", "NCBSet",
             breaks=seq_len(nrow(object)),
             expand=c(0L, 0L)
         ) +
-        geom_vline(
-            xintercept=c(0L, seq_len(ncol(object))) + 0.5,
-            colour="#808080", size=0.1
-        ) +
-        geom_hline(
-            yintercept=c(0L, seq_len(nrow(object))) + 0.5,
-            colour="#808080", size=0.1
-        ) +
         ggtitle("fragmentation map") +
         theme(
             axis.text.x=element_text(angle=90, hjust=1, vjust=0.4),
             plot.title=element_text(hjust=0.5, face="bold"),
-            panel.grid.major=element_blank(),
+            panel.grid.major=element_line(colour="#f0f0f0"),
             panel.border=element_blank(),
             panel.background=element_blank(),
             strip.background=element_rect(fill="#f0f0f0", colour="#ffffff")

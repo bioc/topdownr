@@ -120,6 +120,7 @@
         csequence,
         type=type,
         fixed_modifications=NULL,
+        addCarbamidomethyl=FALSE,
         neutralLoss=neutralLoss,
         verbose=FALSE
     )

@@ -1,3 +1,12 @@
+# topdownr 1.33
+
+## Changes in version 1.33.1
+
+- Adapt to changes in ggplot2.
+- Adapt `.calculateFragments` to changes in `PSMatch::calculateFragments`
+  introduced in
+  [PSMatch:PR41](https://github.com/rformassspectrometry/PSMatch/pull/41).
+
 # topdownr 1.31
 
 ## Changes in version 1.31.1

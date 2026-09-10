@@ -7,6 +7,7 @@
   [S4Vectors:79e0c50](https://github.com/Bioconductor/S4Vectors/commit/79e0c50).
 - Use the `.data` pronoun in `ggplot2` calls to avoid the "no visible binding
   for global variable" NOTE.
+- Import `IRanges::subject`, it was resolved via the search path before.
 
 # topdownr 1.33
 

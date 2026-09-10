@@ -28,6 +28,7 @@ Imports:
     tools,
     utils,
     Biobase,
+    IRanges,
     Matrix (>= 1.4-2),
     MSnbase (>= 2.33.5),
     PSMatch (>= 1.11.4),

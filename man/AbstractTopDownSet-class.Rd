@@ -117,21 +117,21 @@ used to define a sample (technical replicate). This is used to add the
 \value{
 This is an \emph{Abstract/VIRTUAL} class
 to provide a common interface for
-\linkS4class{TopDownSet} and \linkS4class{NCBSet}.
+\link[=TopDownSet-class]{TopDownSet} and \link[=NCBSet-class]{NCBSet}.
 It is not possible to create an \code{AbstractTopDownSet} object.
 }
 \description{
 \emph{Abstract/VIRTUAL} parent class for
-\linkS4class{TopDownSet} and \linkS4class{NCBSet} to provide common interface.
+\link[=TopDownSet-class]{TopDownSet} and \link[=NCBSet-class]{NCBSet} to provide common interface.
 }
 \details{
 This class just provides a common interface. It is not intended for direct
-use by the user. Please see \linkS4class{TopDownSet} for an example usage of its
+use by the user. Please see \link[=TopDownSet-class]{TopDownSet} for an example usage of its
 child class.
 }
 \section{Methods (by generic)}{
 \itemize{
-\item \code{x[i}: Subset operator.
+\item \code{x = AbstractTopDownSet[i = ANY, j = ANY, drop = ANY]}: Subset operator.
 
 For \code{i} \code{numeric}, \code{logical} or \code{character} vectors or empty
 (missing) or \code{NULL} are supported.
@@ -139,18 +139,18 @@ Subsetting is done on the fragment/bond (row) level.
 \code{character} indices could be names
 (e.g. \code{c("a1", "b1", "c1", "c2", "c3")})
 or types (e.g. \code{c("c", "x")}) of the fragments for
-\linkS4class{TopDownSet} objects,
+\link[=TopDownSet-class]{TopDownSet} objects,
 or names of the bonds (e.g. \code{c("bond001")}) for
-\linkS4class{NCBSet} objects. \cr
+\link[=NCBSet-class]{NCBSet} objects. \cr
 \code{j} could be a \code{numeric} or \code{logical} vector
 and subsetting is done on the condition/run (column) level.
 
-\item \code{x[[i}: Subset operator.
+\item \code{x = AbstractTopDownSet[[i = ANY, j = missing]]}: Subset operator.
 
 \code{i} could be a \code{numeric} or \code{logical} vector and
 subsetting is done on the condition/run (column) level.
 
-\item \code{`[[`(x = AbstractTopDownSet, i = ANY, j = missing) <- value}: Setter for a column in the \code{colData} slot.
+\item \code{x = AbstractTopDownSet[[i = ANY, j = missing]] <- value}: Setter for a column in the \code{colData} slot.
 
 The \verb{[[<-} operator is used to add/replace
 a single column of the \code{colData} \code{DataFrame}.
@@ -170,19 +170,19 @@ It is identical to the \verb{[[<-} operator.
 \item \code{assayData(AbstractTopDownSet)}: Accessor for the \code{assay} slot.
 
 Returns a \link[Matrix:dgCMatrix-class]{Matrix::dgCMatrix} that stores the
-intensity/coverage information of \linkS4class{AbstractTopDownSet}
+intensity/coverage information of \link[=AbstractTopDownSet-class]{AbstractTopDownSet}
 object.
 
 \item \code{colData(AbstractTopDownSet)}: Accessor for the \code{colData} slot.
 
 Returns a \link[S4Vectors:DataFrame-class]{S4Vectors::DataFrame} that stores
 metadata for the conditons/runs (columns) of the
-\linkS4class{AbstractTopDownSet} object.
+\link[=AbstractTopDownSet-class]{AbstractTopDownSet} object.
 
 \item \code{colData(AbstractTopDownSet) <- value}: Setter for the \code{colData} slot.
 
 Replaces metadata for the conditons/runs (columns) of the
-\linkS4class{AbstractTopDownSet} object.
+\link[=AbstractTopDownSet-class]{AbstractTopDownSet} object.
 
 \item \code{combine(x = AbstractTopDownSet, y = AbstractTopDownSet)}: Combine \code{AbstractTopDownSet} objects.
 
@@ -220,16 +220,16 @@ conditions/runs (columns).
 \item \code{removeEmptyConditions(AbstractTopDownSet)}: Remove empty conditions/runs.
 
 Removes conditions/runs (columns) without any intensity/coverage
-information from the \linkS4class{AbstractTopDownSet} object.
-It returns a modified \linkS4class{AbstractTopDownSet} object.
+information from the \link[=AbstractTopDownSet-class]{AbstractTopDownSet} object.
+It returns a modified \link[=AbstractTopDownSet-class]{AbstractTopDownSet} object.
 
 \item \code{rowViews(AbstractTopDownSet)}: Accessor for the \code{rowViews} slot.
 
 Depending on the implementation it returns an
-\linkS4class{FragmentViews} object for
-\linkS4class{TopDownSet} objects
+\link[=FragmentViews-class]{FragmentViews} object for
+\link[=TopDownSet-class]{TopDownSet} objects
 or an \link[Biostrings:XStringViews-class]{Biostrings::XStringViews} object for
-\linkS4class{NCBSet} objects.
+\link[=NCBSet-class]{NCBSet} objects.
 
 \item \code{summary(AbstractTopDownSet)}: Summary statistics.
 
@@ -259,7 +259,7 @@ injection time differs across the runs. Use the \code{by} argument to provide a
 \item{\code{rowViews}}{\link[Biostrings:XStringViews-class]{Biostrings::XStringViews},
 information about fragments/bonds (name, type, sequence, mass, charge),
 see \link[Biostrings:XStringViews-class]{Biostrings::XStringViews} and
-\linkS4class{FragmentViews} for details.}
+\link[=FragmentViews-class]{FragmentViews} for details.}
 
 \item{\code{colData}}{\link[S4Vectors:DataFrame-class]{S4Vectors::DataFrame},
 information about the MS2 experiments and the fragmentation conditions.}
@@ -313,10 +313,10 @@ tds[, 1:10]
 }
 \seealso{
 \itemize{
-\item \linkS4class{TopDownSet} and \linkS4class{NCBSet}
+\item \link[=TopDownSet-class]{TopDownSet} and \link[=NCBSet-class]{NCBSet}
 which both implement/use this interface.
 These manual pages also provide some example code.
-\item \linkS4class{FragmentViews}
+\item \link[=FragmentViews-class]{FragmentViews}
 (and \link[Biostrings:XStringViews-class]{Biostrings::XStringViews})
 for the row view interface.
 \item \link[Matrix:dgCMatrix-class]{Matrix::dgCMatrix}

@@ -53,5 +53,5 @@ expandTms2Conditions(
 \seealso{
 \code{\link[=validMs1Settings]{validMs1Settings()}}
 
-\code{\link[=validTms2Settings]{validTms2Settings()}}, \code{\link[S4Vectors:Vector-class]{S4Vectors::expand.grid()}}
+\code{\link[=validTms2Settings]{validTms2Settings()}}, \code{\link[base:expand.grid]{base::expand.grid()}}
 }

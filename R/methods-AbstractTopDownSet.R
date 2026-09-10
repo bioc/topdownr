@@ -326,7 +326,7 @@ setMethod("dimnames", "AbstractTopDownSet", function(x) {
 ## @param object `AbstractTopDownSet`
 ## @return `AbstractTopDownSet`
 #' @aliases removeEmptyConditions
-#' removeEmptyConditions,AbstractTopDownSet-method
+#' @aliases removeEmptyConditions,AbstractTopDownSet-method
 #' @export
 setMethod("removeEmptyConditions", "AbstractTopDownSet",
           function(object) {
@@ -479,7 +479,7 @@ setMethod("updateConditionNames", "AbstractTopDownSet",
 #' @param by `list`, grouping information.
 ## @return `AbstractTopDownSet`
 #' @aliases updateMedianInjectionTime
-#' updateMedianInjectionTime,TopDownSet-method
+#' @aliases updateMedianInjectionTime,TopDownSet-method
 #' @export
 setMethod("updateMedianInjectionTime", "AbstractTopDownSet",
           function(object, by=list(Mz=object$Mz, AgcTarget=object$AgcTarget)) {

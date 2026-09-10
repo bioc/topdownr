@@ -8,6 +8,8 @@
 - Use the `.data` pronoun in `ggplot2` calls to avoid the "no visible binding
   for global variable" NOTE.
 - Import `IRanges::subject`, it was resolved via the search path before.
+- Adapt roxygen comments to `roxygen2` 8.1.0 (hanging indent for multi-line
+  `@importFrom`, one line per `@aliases`, unambiguous links) and re-document.
 
 # topdownr 1.33
 

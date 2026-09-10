@@ -58,7 +58,7 @@ with 3 columns, namely: mass, name, to, see details section.}
 \item{neutralLoss}{\code{list},
 neutral loss that should be applied, see
 \code{\link[PSMatch:calculateFragments]{PSMatch::calculateFragments()}} and
-\code{\link[PSMatch:calculateFragments]{PSMatch::defaultNeutralLoss()}}
+\code{\link[PSMatch:defaultNeutralLoss]{PSMatch::defaultNeutralLoss()}}
 for details.}
 
 \item{sequenceOrder}{\code{character},
@@ -105,7 +105,7 @@ in \code{\link[=writeMethodXmls]{writeMethodXmls()}} prior version 1.5.2 in Dec 
 A \code{TopDownSet} object.
 }
 \description{
-It creates an \linkS4class{TopDownSet} object and is its only constructor.
+It creates an \link[=TopDownSet-class]{TopDownSet} object and is its only constructor.
 }
 \details{
 \code{readTopDownFiles} reads and processes all top-down files, namely:
@@ -172,5 +172,5 @@ if (require("topdownrdata")) {
 }
 \seealso{
 \code{\link[PSMatch:calculateFragments]{PSMatch::calculateFragments()}},
-\code{\link[PSMatch:calculateFragments]{PSMatch::defaultNeutralLoss()}}
+\code{\link[PSMatch:defaultNeutralLoss]{PSMatch::defaultNeutralLoss()}}
 }

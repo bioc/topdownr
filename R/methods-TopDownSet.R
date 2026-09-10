@@ -234,7 +234,7 @@ setMethod("filterIntensity", "TopDownSet",
 ## @param by `list`, how technical replicates are defined.
 ## @return `TopDownSet`
 #' @aliases filterNonReplicatedFragments
-#' filterNonReplicatedFragments,TopDownSet-method
+#' @aliases filterNonReplicatedFragments,TopDownSet-method
 #' @export
 setMethod("filterNonReplicatedFragments", "TopDownSet",
           function(object, minN=2, by=object$Sample, ...) {
@@ -409,6 +409,7 @@ setMethod("summary", "TopDownSet",
 #'
 #' `as(object, "MSnSet"): Coerce an [TopDownSet-class] object into an
 #' [MSnbase::MSnSet-class] object.
+#' @usage NULL
 setAs("TopDownSet", "MSnSet", function(from) {
     processing <- new(
         "MSnProcess",
@@ -438,6 +439,7 @@ setAs("TopDownSet", "MSnSet", function(from) {
 #'
 #' `as(object, "NCBSet"): Coerce an [TopDownSet-class] object into an
 #' [NCBSet-class] object.
+#' @usage NULL
 setAs("TopDownSet", "NCBSet", function(from) {
     assay <- .ncbMap(from)
     ncb <- new(

@@ -67,7 +67,7 @@ names of the fragments, same length as \code{start}/\code{end}/width`.}
 \item{\ldots}{arguments passed to internal/other methods.}
 }
 \value{
-An \linkS4class{FragmentViews} object.
+An \link[=FragmentViews-class]{FragmentViews} object.
 }
 \description{
 The FragmentViews class is a basic container for storing a set of views
@@ -95,7 +95,7 @@ In general it is not necessary to call the constructor manually. See
 
 
 \code{as(object, "data.frame")}: Coerce an
-\linkS4class{FragmentViews} object into a \code{data.frame}.
+\link[=FragmentViews-class]{FragmentViews} object into a \code{data.frame}.
 }
 
 \examples{

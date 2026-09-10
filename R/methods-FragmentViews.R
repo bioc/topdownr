@@ -112,6 +112,7 @@ setMethod("show", "FragmentViews", function(object) {
 #'
 #' `as(object, "data.frame")`: Coerce an
 #' [FragmentViews-class] object into a `data.frame`.
+#' @usage NULL
 #' @examples
 #' as(fv, "data.frame")
 setAs("FragmentViews", "data.frame", function(from) {

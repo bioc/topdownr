@@ -341,7 +341,7 @@ createExperimentsFragmentOptimisation <-
 #' @return `data.frame` with all possible combinations of conditions/settings.
 #' @seealso [validMs1Settings()]
 #' @rdname expandMsConditions
-#' @seealso [validTms2Settings()], [expand.grid()]
+#' @seealso [validTms2Settings()], [base::expand.grid()]
 #' @export
 #' @examples
 #' expandMs1Conditions(FirstMass=100, LastMass=400)
@@ -438,7 +438,8 @@ validTms2Settings <- function(type=c("All", "TMS2", "ETD", "CID", "HCD", "UVPD")
 #'
 #' @param type `character`, MS1/TMS2/Activation
 #' @param family `character`, currently just Calcium is supported
-#' @param version `character`, currently 3.1, 3.2 [default], 3.3 are supported
+#' @param version `character`, currently 3.1, 3.2 \[default\], 3.3 are
+#' supported
 #' @return `matrix`
 #' @noRd
 .validMsSettings <- function(type, family="Calcium", version="3.2") {
@@ -460,7 +461,8 @@ validTms2Settings <- function(type=c("All", "TMS2", "ETD", "CID", "HCD", "UVPD")
 #' @param value any type, value of element
 #' @param type `character`, type of setting
 #' @param family `character`, currently just Calcium is supported
-#' @param version `character`, currently 3.1, 3.2 [default], 3.3 are supported
+#' @param version `character`, currently 3.1, 3.2 \[default\], 3.3 are
+#' supported
 #' @return `TRUE` if valid, else message
 #' @noRd
 .validateMsSetting <- function(name, value, type, family="Calcium",
@@ -511,7 +513,8 @@ validTms2Settings <- function(type=c("All", "TMS2", "ETD", "CID", "HCD", "UVPD")
 #' @param type `character`, MS1/TMS2/ActivationType
 #' @param settings `list`, named arguments used for validation
 #' @param family `character`, currently just Calcium is supported
-#' @param version `character`, currently 3.1, 3.2 [default], 3.3 are supported
+#' @param version `character`, currently 3.1, 3.2 \[default\], 3.3 are
+#' supported
 #' @return `TRUE` if valid, else stops with an error
 #' @noRd
 .validateMsSettings <- function(type=c("MS1", "TMS2", "ETD", "CID", "HCD",

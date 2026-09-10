@@ -1,5 +1,5 @@
 #' Test whether all values in a vector are identical
-#' (all(x[1] == x) is slower than unique)
+#' (`all(x[1] == x)` is slower than `unique`)
 #'
 #' @param x vector
 #' @return `logical`, TRUE/FALSE
@@ -73,8 +73,8 @@ cat0 <- function(...) {
 }
 
 #' The ScanHeadsman output for the header information contains a column
-#' FilterString with the format "FTMS + p NSI Full ms2 [0-9]+\.[0-9]+@hcd35.00
-#' [xxx-yyy]". This function converts this format to the ID stored in the mass
+#' FilterString with the format `"FTMS + p NSI Full ms2 [0-9]+\.[0-9]+@hcd35.00
+#' [xxx-yyy]"`. This function converts this format to the ID stored in the mass
 #' label.
 #'
 #' @param x `character`
@@ -91,10 +91,12 @@ cat0 <- function(...) {
 #' The ScanHeadsman output contains some FilterStrings that have wrong IDs (the
 #' id from the previous or next run), e.g.:
 #'
+#' ```
 #' FTMS + p NSI Full ms2 1162.0007@cid28.00 [100.0000-2000.0000]
 #' FTMS + p NSI Full ms2 1162.0009@hcd28.00 [100.0000-2000.0000]
 #' FTMS + p NSI Full ms2 1162.0009@hcd28.00 [100.0000-2000.0000]
 #' FTMS + p NSI Full ms2 1162.0009@cid35.00 [100.0000-2000.0000]
+#' ```
 #'
 #' pavel-shliaha finds out, that the skip is never larger than 1, never more
 #' than 1 in a row and both is possible 1, 2, 2, 4 and 1, 3, 3, 4.
@@ -350,7 +352,7 @@ cat0 <- function(...) {
 #' @param divisor `double`, divisor (determines which decimal place)
 #' @return `double`, mass label (id encoded in the second to fourth decimal
 #' place)
-#' @seealso [.massLabelToId()]
+#' @seealso `.massLabelToId()`
 #' @noRd
 .massLabel <- function(x, id, divisor=10000L) {
     if (any(log10(divisor) <= log10(id) + 1L)) {
@@ -365,7 +367,7 @@ cat0 <- function(...) {
 #' @param idDigits `integer`, number of digits behind the decimal place that
 #' store id information (not mass information) from the last one (e.g. 3 if
 #' the id is 123 and the mz is 900.0123)
-#' @seealso [.massLabel()]
+#' @seealso `.massLabel()`
 #' @noRd
 .massLabelToId <- function(x, idDigits=3L) {
     # was the following before, but results in round errors ("7" becomes 6L)
@@ -576,7 +578,8 @@ cat0 <- function(...) {
 }
 
 #' The ScanHeadsMan output for the scan conditons contains a column
-#' TargetedMassList with the format "(mz=[0-9]+\.[0-9]+ z=[0-9]+ name=)". This
+#' TargetedMassList with the format `"(mz=[0-9]+\.[0-9]+ z=[0-9]+ name=)"`.
+#' This
 #' function converts this format to truncated (one decimal place) mz values.
 #'
 #' @param x `character`
@@ -638,8 +641,8 @@ cat0 <- function(...) {
 
 #' Due to changes in ProteomDiscover some mzML files have a different
 #' `spectrumId` format that is not supported by proteowizard (and hence by
-#' mzR), e.g. "scan=[acquisitionNum], file=[fileId]" vs the supported
-#' "controllerType=0 controllerNumber=1 scan=[acquisitionNum]".
+#' mzR), e.g. `"scan=[acquisitionNum], file=[fileId]"` vs the supported
+#' `"controllerType=0 controllerNumber=1 scan=[acquisitionNum]"`.
 #' As fallback solution proteowizard just use 1:n as acquisitionNum which cause
 #' mismatches to the ScanHeadsman output. See
 #' https://codeberg.org/sgibb/topdownr/issues/73 for details.

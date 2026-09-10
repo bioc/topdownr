@@ -90,7 +90,7 @@ replicates (that's why the default is the
 \code{"Sample"} column in \code{colData}).}
 }
 \value{
-An \linkS4class{TopDownSet} object.
+An \link[=TopDownSet-class]{TopDownSet} object.
 }
 \description{
 The TopDownSet class is a container for a whole top-down proteomics
@@ -106,14 +106,14 @@ for a detailed example how to work with
 \item \code{aggregate(TopDownSet)}: Aggregate conditions/runs.
 
 Aggregates conditions/runs (columns) in an
-\linkS4class{TopDownSet} object
+\link[=TopDownSet-class]{TopDownSet} object
 \code{by} a
 user-given value (default is the
 \code{"Sample"} column of \code{colData}
 which has the same value for technical replicates).
 It combines intensity values and numeric metadata of the grouped
 conditions/runs (columns) by \code{mean} and returns a reduced
-\linkS4class{TopDownSet} object.
+\link[=TopDownSet-class]{TopDownSet} object.
 
 \item \code{combine(x = TopDownSet, y = TopDownSet)}: Combine \code{TopDownSet} objects.
 
@@ -153,12 +153,12 @@ technical replicates.
 \item \code{normalize(TopDownSet)}: Normalise.
 
 Applies \emph{T}otal \emph{I}on \emph{C}urrent normalisation to a
-\linkS4class{TopDownSet} object.
+\link[=TopDownSet-class]{TopDownSet} object.
 The normalisation ist done per scans/conditions (column-wise normalisation).
 
 \item \code{plot(x = TopDownSet, y = missing)}: Plotting.
 
-Plots an \linkS4class{TopDownSet} object. The function returns a \code{list}
+Plots an \link[=TopDownSet-class]{TopDownSet} object. The function returns a \code{list}
 of \code{ggplot} objects (one item per condtion).
 Use \code{pdf} or another non-interactive device to plot the list of \code{ggplot}
 objects (see example section).
@@ -174,9 +174,9 @@ intensity values.
 \section{Slots}{
 
 \describe{
-\item{\code{rowViews}}{\linkS4class{FragmentViews},
+\item{\code{rowViews}}{\link[=FragmentViews-class]{FragmentViews},
 information about fragments (name, type, sequence, mass, charge), see
-\linkS4class{FragmentViews} for details.}
+\link[=FragmentViews-class]{FragmentViews} for details.}
 
 \item{\code{colData}}{\link[S4Vectors:DataFrame-class]{S4Vectors::DataFrame},
 information about the MS2 experiments and the fragmentation conditions.}
@@ -202,13 +202,13 @@ ion/fragment matches. See \code{redundantIonMatch} and
 \section{Coercion}{
 
 
-`as(object, "MSnSet"): Coerce an \linkS4class{TopDownSet} object into an
+`as(object, "MSnSet"): Coerce an \link[=TopDownSet-class]{TopDownSet} object into an
 \link[MSnbase:MSnSet-class]{MSnbase::MSnSet} object.
 
 
 
-`as(object, "NCBSet"): Coerce an \linkS4class{TopDownSet} object into an
-\linkS4class{NCBSet} object.
+`as(object, "NCBSet"): Coerce an \link[=TopDownSet-class]{TopDownSet} object into an
+\link[=NCBSet-class]{NCBSet} object.
 }
 
 \examples{
@@ -284,7 +284,7 @@ dev.off()
 }
 \seealso{
 \itemize{
-\item \linkS4class{FragmentViews}
+\item \link[=FragmentViews-class]{FragmentViews}
 for the row view interface.
 \item \link[Matrix:dgCMatrix-class]{Matrix::dgCMatrix}
 for technical details about the intensity storage.

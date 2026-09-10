@@ -28,13 +28,13 @@
 #' @import S4Vectors
 #' @importClassesFrom Matrix Matrix dgCMatrix
 #' @importFrom Matrix Matrix sparseMatrix sparseVector crossprod tcrossprod
-#' drop0 nnzero
+#'   drop0 nnzero
 #' @importFrom Biobase assayData
 #' @importFrom IRanges subject
 #' @importFrom ggplot2 .data aes element_blank element_line element_rect
-#' element_text facet_grid geom_hline geom_tile geom_segment geom_text
-#' geom_vline ggplot ggtitle labs scale_alpha scale_color_manual
-#' scale_fill_manual scale_x_discrete scale_y_continuous theme theme_classic
+#'   element_text facet_grid geom_hline geom_tile geom_segment geom_text
+#'   geom_vline ggplot ggtitle labs scale_alpha scale_color_manual
+#'   scale_fill_manual scale_x_discrete scale_y_continuous theme theme_classic
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mzR openMSfile close header peaks runInfo
 #' @importFrom PSMatch calculateFragments defaultNeutralLoss getAminoAcids
@@ -42,5 +42,5 @@
 #' @importFrom stats ave median setNames quantile
 #' @importFrom tools file_ext file_path_sans_ext
 #' @importFrom utils modifyList txtProgressBar setTxtProgressBar object.size
-#' read.csv .DollarNames packageVersion
+#'   read.csv .DollarNames packageVersion
 "_PACKAGE"

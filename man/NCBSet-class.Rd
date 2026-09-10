@@ -64,11 +64,11 @@ specifies whether \code{"conditions"} (columns; default) or
 added.}
 }
 \value{
-An \linkS4class{NCBSet} object.
+An \link[=NCBSet-class]{NCBSet} object.
 }
 \description{
 The NCBSet class is a container for a top-down proteomics experiment
-similar to the \linkS4class{TopDownSet}
+similar to the \link[=TopDownSet-class]{TopDownSet}
 but instead of intensity values it just stores the information if a
 bond is covered by a N-terminal (encoded as \code{1}),
 a C-terminal (encoded as \code{2})
@@ -167,7 +167,7 @@ fragmentationMap(ncb)
 }
 \seealso{
 \itemize{
-\item An \code{NCBSet} is generated from an \linkS4class{TopDownSet} object.
+\item An \code{NCBSet} is generated from an \link[=TopDownSet-class]{TopDownSet} object.
 \item \link[Biostrings:XStringViews-class]{Biostrings::XStringViews}
 for the row view interface.
 \item \link[Matrix:dgCMatrix-class]{Matrix::dgCMatrix}

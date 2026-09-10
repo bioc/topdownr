@@ -161,6 +161,19 @@ test_that(".groupByLabels", {
                  paste(rep(1:2, 4), rep(c(1, NA), 4), sep=":"))
     expect_equal(.groupByLabels(x, c("ID", "na"), sep="_"),
                  paste(rep(1:2, 4), rep(c(1, NA), 4), sep="_"))
+    ## column-less input: `as.data.frame` doesn't create a valid column name
+    ## for `Rle`/`Vector` since S4Vectors 0.51.9 (Bioc 3.24) and the name for
+    ## atomic vectors is just the deparsed argument
+    expect_error(.groupByLabels(Rle(rep(1:2, 4)), "LE"), "valid column names")
+    expect_equal(.groupByLabels(rep(1:2, 4)), as.character(rep(1:2, 4)))
+    expect_equal(.groupByLabels(rep(LETTERS[1:2], each=4)),
+                 rep(LETTERS[1:2], each=4))
+    expect_equal(.groupByLabels(c(a=1, b=2, c=1)), as.character(c(1, 2, 1)))
+    expect_equal(.groupByLabels(Rle(rep(1:2, 4))), as.character(rep(1:2, 4)))
+    expect_equal(.groupByLabels(Rle(rep(LETTERS[1:2], each=4))),
+                 rep(LETTERS[1:2], each=4))
+    expect_equal(.groupByLabels(list(ID=rep(1:2, 4), LE=rep(LETTERS[1:2], 4))),
+                 paste(rep(1:2, 4), rep(LETTERS[1:2], 4), sep=":"))
 })
 
 test_that(".groupId", {

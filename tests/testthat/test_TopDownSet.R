@@ -309,6 +309,13 @@ test_that("filterInjectionTime", {
                                   "rank >= 3; 4 fragments [3;3]."))
     expect_equal(filterInjectionTime(tdfit, maxDeviation=0.6, keepTopN=2),
                  tdfitr)
+    ## `Sample` is turned into an `Rle` by `.colsToRle` in
+    ## `updateConditionNames`, see `.groupByLabels`
+    tdfitRle <- tdfit
+    tdfitRle$Sample <- Rle(tdfit$Sample)
+    expect_equal(colnames(filterInjectionTime(tdfitRle, maxDeviation=0.6,
+                                              keepTopN=2)),
+                 colnames(tdfitr))
 })
 
 test_that("filterIntensity", {

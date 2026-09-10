@@ -1,3 +1,11 @@
+# topdownr 1.35
+
+## Changes in version 1.35.1
+
+- Fix `.groupByLabels` for column-less input, e.g. `Rle`, that isn't named by
+  `as.data.frame` anymore, see
+  [S4Vectors:79e0c50](https://github.com/Bioconductor/S4Vectors/commit/79e0c50).
+
 # topdownr 1.33
 
 ## Changes in version 1.33.1
@@ -66,6 +74,7 @@
 - Adapt to new `DFrame`.
 
 # topdownr 1.16
+
 - New version for Bioc 3.14 (release)
 
 # topdownr 1.15

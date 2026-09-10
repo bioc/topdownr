@@ -237,6 +237,15 @@ cat0 <- function(...) {
 #' @return `list`
 #' @noRd
 .groupByLabels <- function(x, cols=names(x), sep=":") {
+    if (is.null(dim(x)) && !is.list(x)) {
+        ## Rle/Vector don't get a valid column name by as.data.frame since
+        ## S4Vectors 0.51.9, see:
+        ## https://github.com/Bioconductor/S4Vectors/commit/79e0c50
+        if (!missing(cols)) {
+            stop("All 'cols' have to be valid column names of 'x'.")
+        }
+        return(as.character(x))
+    }
     x <- as.data.frame(x)
     if (any(!cols %in% colnames(x))) {
         stop("All 'cols' have to be valid column names of 'x'.")

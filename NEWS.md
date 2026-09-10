@@ -5,6 +5,8 @@
 - Fix `.groupByLabels` for column-less input, e.g. `Rle`, that isn't named by
   `as.data.frame` anymore, see
   [S4Vectors:79e0c50](https://github.com/Bioconductor/S4Vectors/commit/79e0c50).
+- Use the `.data` pronoun in `ggplot2` calls to avoid the "no visible binding
+  for global variable" NOTE.
 
 # topdownr 1.33
 

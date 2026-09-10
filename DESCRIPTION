@@ -31,7 +31,7 @@ Imports:
     Matrix (>= 1.4-2),
     MSnbase (>= 2.33.5),
     PSMatch (>= 1.11.4),
-    ggplot2 (>= 2.2.1),
+    ggplot2 (>= 3.0.0),
     mzR (>= 2.27.5)
 Suggests:
     topdownrdata (>= 0.2),

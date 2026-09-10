@@ -128,14 +128,14 @@ setMethod("fragmentationMap", "NCBSet",
         if (alphaIntensity) {
             gg <- gg +
                 geom_tile(
-                    aes(x=col,
-                        y=row,
-                        fill=x,
-                        alpha=AssignedIntensity
+                    aes(x=.data$col,
+                        y=.data$row,
+                        fill=.data$x,
+                        alpha=.data$AssignedIntensity
                     )
                 ) + scale_alpha(name="Assigned Intensity")
         } else {
-           gg <- gg + geom_tile(aes(x=col, y=row, fill=x))
+           gg <- gg + geom_tile(aes(x=.data$col, y=.data$row, fill=.data$x))
         }
     gg  <- gg +
         facet_grid(. ~ Activation, scales="free_x", space="free_x") +
